@@ -1,7 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
-
-.hero {
+.hero2 {
+  background-image: url("https://preview.colorlib.com/theme/tasty/images/bg_3.jpg");
+}
+.hero1 {
   background-image: url("https://preview.colorlib.com/theme/tasty/images/bg_2.jpg");
+}
+.hero3 {
+  background-image: url("https://preview.colorlib.com/theme/tasty/images/bg_1.jpg");
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 6px 0;
+  display: none;
+}
+.hamburgermenu {
+  display: none;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 1200;
+  .link {
+    color: black;
+  }
+}
+.hamburgermenu.open {
+  display: block;
+  position: absolute;
+}
+.hero {
   height: 90vh;
   background-position: center;
   background-size: cover;
@@ -15,7 +42,6 @@
   font-family: "Indie Flower", cursive;
   flex-direction: column;
 
-  //   background-repeat: no-repeat;
   button {
     font-family: "Mulish", sans-serif;
     background-color: transparent;
@@ -32,20 +58,23 @@
 }
 .navbar {
   height: 70px;
-  display: flex;
   color: white;
   position: absolute;
   font-family: "Mulish", sans-serif;
-
+  width: 100%;
+  z-index: 1200;
   .cont {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 400px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    // gap: 100px;
   }
   .tasty {
     // margin-left: 400px;
-    margin-right: 300px;
+    // margin-right: 300px;
     border: 1px solid white;
     padding: 0 20px;
     font-size: 20px;
@@ -56,26 +85,50 @@
     gap: 20px;
     flex-direction: row;
   }
+  @media only screen and (max-width: 1200px) {
+    .menu {
+      display: none;
+    }
+    .bar {
+      display: block;
+    }
+  }
 }
 .link {
   color: white;
   text-decoration: none;
 }
 .chef {
-  padding: 0 400px;
   font-family: "Mulish", sans-serif;
-
-  .chefdiv {
-    display: flex;
-    gap: 70px;
-    img {
-      max-width: 560px;
+  width: 100%;
+  @media only screen and (max-width: 1200px) {
+    .chefdiv {
+      display: block;
+      text-align: center;
     }
+  }
+  @media only screen and (min-width: 1200px) {
+    .chefdiv {
+      display: flex;
+    }
+  }
+  .chefdiv {
+    max-width: 1200px;
+    margin: 0 auto;
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    margin-bottom: 100px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
     .about {
       display: flex;
       flex-direction: column;
-      //   gap: 20px;
-      padding-top: 130px;
       .tasty {
         color: rgb(209, 207, 207);
       }
@@ -90,7 +143,8 @@
   }
 }
 .menuu {
-  padding: 0 400px;
+  // padding: 0 400px;
+  width: 100%;
   font-family: "Mulish", sans-serif;
   display: flex;
   align-items: center;
@@ -98,6 +152,10 @@
   text-align: center;
   flex-direction: column;
   margin-bottom: 100px;
+  .cont {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   .our {
     margin-bottom: 50px;
 
@@ -114,7 +172,7 @@
       align-items: center;
       justify-content: center;
       //   flex-direction: column;
-      gap: 60px;
+      gap: 10px;
       .main {
         background-color: #ffb400;
         padding: 20px 32px;
@@ -163,11 +221,16 @@
   }
 }
 .table {
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  .cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   input {
     width: 500px;
   }
@@ -187,4 +250,11 @@
 .linkk {
   color: black;
   text-decoration: none;
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 6px 0;
+  display: none;
 }

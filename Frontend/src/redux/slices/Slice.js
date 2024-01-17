@@ -1,12 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-// export interface CounterState {
-//   value: number
-// }
-
-// const initialState: CounterState = {
-//   value: 0,
-// }
 export const fetchUserData = createAsyncThunk(
   "user/fetchUserData",
   async () => {
@@ -27,8 +20,6 @@ export const postUserData = createAsyncThunk(
   "user/postUserData",
   async (newItem) => {
     const newProd = await axios.post(`http://localhost:3000/posts`, newItem);
-    console.log(newProd);
-    // const filtered = response.data.filter((elem) => elem.id !== id);
     return newProd.data;
   }
 );
@@ -51,9 +42,6 @@ export const counterSlice = createSlice({
         );
       }
       localStorage.setItem("wishlist", JSON.stringify(state.wishlist));
-    },
-    decrement: (state) => {
-      //   state.value -= 1;
     },
   },
   extraReducers: (builder) => {
@@ -94,7 +82,6 @@ export const counterSlice = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer function
 export const { increment, decrement, wishlistAdd } = counterSlice.actions;
 
 export default counterSlice.reducer;

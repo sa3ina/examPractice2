@@ -31,12 +31,12 @@ const Add = () => {
   useEffect(() => {
     dispatch(fetchUserData());
   }, [dispatch]);
-  // const searched = data.filter((elem) =>
-  //   elem.name.toLowerCase().includes(search.toLowerCase())
-  // );
+  const searched = data.filter((elem) =>
+    elem.name.toLowerCase().includes(search.toLowerCase())
+  );
   return (
     <div className="table">
-      <div>
+      <div className="cont">
         <h1>Add</h1>
         <Formik
           initialValues={{
@@ -89,8 +89,8 @@ const Add = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data &&
-              data.map((row, i) => (
+            {searched &&
+              searched.map((row, i) => (
                 <TableRow
                   key={i}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}

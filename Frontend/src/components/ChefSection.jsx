@@ -4,12 +4,10 @@ const ChefSection = () => {
   return (
     <div className="chef">
       <div className="chefdiv">
-        <div>
-          <img
-            src="https://preview.colorlib.com/theme/tasty/images/about-2.jpg"
-            alt=""
-          />
-        </div>
+        <img
+          src="https://preview.colorlib.com/theme/tasty/images/about-2.jpg"
+          alt=""
+        />
         <div className="about">
           <p className="tasty">ABOUT TASTY</p>
           <p className="our">Our chef cooks the most delicious food for you</p>
